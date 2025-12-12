@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="loginpage.css">
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Login</h2>
+
+    <form onsubmit="login(event)">
+        <form>
+            <input type="text" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+
+
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+<script>
+function login(event) {
+    event.preventDefault(); // stop page from reloading
+
+    let email = document.getElementById("email").value;
+    let pass = document.getElementById("password").value;
+
+    let validEmail = "sandeep";
+    let validPassword = "123";
+
+    if (email === validEmail && pass === validPassword) {
+        window.location.href = "pet22.html";   // go to home page
+    } else {
+        document.getElementById("message").innerText = "Incorrect email or password";
+    }
+}
+
+</script>
+
+</body>
+</html>
